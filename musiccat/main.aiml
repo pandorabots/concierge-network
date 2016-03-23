@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- mussicat -->
+
+<aiml version="2.0">
+
+  <category>
+    <pattern>XSIMILAR <set>classical</set></pattern>
+    <template><srai>XRANDOM CLASSICAL BLOCK <star/></srai></template>
+  </category>
+
+  <category>
+    <pattern>XSIMILAR <set>hiphop</set></pattern>
+    <template><srai>XRANDOM HIPHOP BLOCK <star/></srai></template>
+  </category>
+
+  <category>
+    <pattern>XSIMILAR <set>pop</set></pattern>
+    <template><srai>XRANDOM POP BLOCK <star/></srai></template>
+  </category>
+
+  <category>
+    <pattern>XSIMILAR <set>rock</set></pattern>
+    <template><srai>XRANDOM ROCK BLOCK <star/></srai></template>
+  </category>
+
+  <category>
+    <pattern>XSIMILAR <set>jazz</set></pattern>
+    <template><srai>XRANDOM JAZZ BLOCK <star/></srai></template>
+  </category>
+
+  <category>
+    <pattern>XSIMILAR <set>country</set></pattern>
+    <template><srai>XRANDOM COUNTRY BLOCK <star/></srai></template>
+  </category>
+
+  <category>
+    <pattern>XSIMILAR <set>soul</set></pattern>
+    <template><srai>XRANDOM SOUL BLOCK <star/></srai></template>
+  </category>
+
+  <category>
+    <pattern>XSIMILAR <set>edm</set></pattern>
+    <template><srai>XRANDOM EDM BLOCK <star/></srai></template>
+  </category>
+
+  <category>
+    <pattern>XRANDOM <set>genres</set> BLOCK ^</pattern>
+    <template>
+      <srai>XFETCH <star index="1"/>
+        <random>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
+          <li>7</li>
+          <li>8</li>
+        </random> BLOCK <star index="2"/>
+      </srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>XFETCH * * BLOCK ^</pattern>
+    <template>
+      <think>
+        <set var="block"><star index="3"/></set>
+        <set var="random"><map><name><star index="1"/></name><star index="2"/></map></set>
+      </think>
+      <condition var="random">
+        <li><value><get var="block"/></value><srai>XRANDOM <star index="1"/> BLOCK <star index="3"/></srai></li>
+        <li><get var="random"/></li>
+      </condition>
+    </template>
+  </category>
+
+</aiml>

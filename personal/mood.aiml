@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<aiml version="2.0">
+
+  <category>
+    <pattern>I AM *</pattern>
+    <that>HOW ARE YOU FEELING</that>
+    <template><sr/></template>
+  </category>
+
+  <category>
+    <pattern>I FEEL *</pattern>
+    <that>HOW ARE YOU FEELING</that>
+    <template><sr/></template>
+  </category>
+
+  <category>
+    <pattern>I AM FEELING *</pattern>
+    <that>HOW ARE YOU FEELING</that>
+    <template><sr/></template>
+  </category>
+
+  <category>
+    <pattern>FEELING *</pattern>
+    <template><sr/></template>
+  </category>
+
+  <category>
+    <pattern><set>feelings</set></pattern>
+    <template><sr/></template>
+  </category>
+
+  <category>
+    <pattern>SAD</pattern>
+    <that>HOW ARE YOU FEELING</that>
+    <template>
+      I'm sorry to hear that. When I'm sad, I like to reflect and listen to <sraix><bot><bot name="musiccat"/></bot>XRANDOM SOUL BLOCK</sraix>.
+    </template>
+  </category>
+
+  <category>
+    <pattern>HAPPY</pattern>
+    <that>HOW ARE YOU FEELING</that>
+    <template>Glad to hear it! You should listen to some <sraix><bot><bot name="musiccat"/></bot>XRANDOM POP BLOCK</sraix> to complement your mood.</template>
+  </category>
+
+  <category>
+    <pattern>TIRED</pattern>
+    <that>HOW ARE YOU FEELING</that>
+    <template>Maybe some <sraix><bot><bot name="musiccat"/></bot>XRANDOM EDM BLOCK</sraix> will wake you up!</template>
+  </category>
+
+  <category>3
+    <pattern>BORED</pattern>
+    <that>HOW ARE YOU FEELING</that>
+    <template>You're bored? How about some thinking music? Maybe you should listen to some <sraix><bot><bot name="musiccat"/></bot>XRANDOM JAZZ BLOCK</sraix>.</template>
+  </category>
+
+  <category>
+    <pattern>INSPIRED</pattern>
+    <that>HOW ARE YOU FEELING</that>
+    <template>That's great! I like to listen to classical music when I feel that way. How about some music by <sraix><bot><bot name="musiccat"/></bot>XRANDOM CLASSICAL BLOCK</sraix></template>
+  </category>
+
+</aiml>

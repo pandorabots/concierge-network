@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<aiml version="2.0">
+
+  <category>
+    <pattern>I AM *</pattern>
+    <that>WHAT ARE YOU UP TO RIGHT NOW</that>
+    <template><sr/></template>
+  </category>
+
+  <category>
+    <pattern><set>activities</set></pattern>
+    <that>WHAT ARE YOU UP TO RIGHT NOW</that>
+    <template><sr/></template>
+  </category>
+
+  <category>
+    <pattern>PARTYING</pattern>
+    <that>WHAT ARE YOU UP TO RIGHT NOW</that>
+    <template>Sounds like fun! Put on some <sraix><bot><bot name="musiccat"/></bot>XRANDOM EDM BLOCK</sraix> and dance!</template>
+  </category>
+
+  <category>
+    <pattern>EXERCISING</pattern>
+    <that>WHAT ARE YOU UP TO RIGHT NOW</that>
+    <template>How about some music to get you pumped up? What type of exercise?</template>
+  </category>
+
+  <category>
+    <pattern>I AM <set>exercise</set></pattern>
+    <that>WHAT TYPE OF EXERCISE</that>
+    <template><sr/></template>
+  </category>
+
+  <category>
+    <pattern><set>exercise</set></pattern>
+    <that>WHAT TYPE OF EXERCISE</that>
+    <template>Jam to some <sraix><bot><bot name="musiccat"/></bot>XRANDOM <map name="exercise"><star/></map> BLOCK</sraix> while <star/>!</template>
+  </category>
+
+  <category>
+    <pattern>WORKING</pattern>
+    <that>WHAT ARE YOU UP TO RIGHT NOW</that>
+    <template>I find <sraix><bot><bot name="musiccat"/></bot>XRANDOM CLASSICAL BLOCK</sraix> to be great background music when I am working.</template>
+  </category>
+
+  <category>
+    <pattern>RESTING</pattern>
+    <that>WHAT ARE YOU UP TO RIGHT NOW</that>
+    <template>Listening to <sraix><bot><bot name="musiccat"/></bot>XRANDOMKEY FOLK BLOCK</sraix> always puts me to sleep.</template>
+  </category>
+
+</aiml>

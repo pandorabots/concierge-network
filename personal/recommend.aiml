@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<aiml version="2.0">
+
+  <category>
+    <pattern>I LIKE *</pattern>
+    <that>TELL ME ONE OF YOUR FAVORITE ARTISTS</that>
+    <template><srai>XFAVORITEARTIST <star/></srai></template>
+  </category>
+
+  <category>
+    <pattern>I LIKE TO LISTEN TO *</pattern>
+    <that>TELL ME ONE OF YOUR FAVORITE ARTISTS</that>
+    <template><srai>XFAVORITEARTIST <star/></srai></template>
+  </category>
+
+  <category>
+    <pattern>MY FAVORITE ARTIST IS *</pattern>
+    <template><srai>XFAVORITEARTIST <star/></srai></template>
+  </category>
+
+  <category>
+    <pattern>* IS MY FAVORITE ARTIST</pattern>
+    <template><srai>XFAVORITEARTIST <star/></srai></template>
+  </category>
+
+  <category>
+    <pattern>*</pattern>
+    <that>TELL ME ONE OF YOUR FAVORITE ARTISTS</that>
+    <template><srai>XFAVORITEARTIST <star/></srai></template>
+  </category>
+
+  <category>
+    <pattern>XFAVORITEARTIST *</pattern>
+    <template>
+      <think><set name="favoriteartist"><star/></set></think>
+      <srai>XREC</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>WHAT SHOULD I LISTEN TO</pattern>
+    <template>
+      <condition name="favoriteartist">
+        <li value="unknown">Tell me one of your favorite artists.</li>
+        <li><srai>XREC</srai></li>
+      </condition>
+    </template>
+  </category>
+
+  <category>
+    <pattern>XREC</pattern>
+    <template>If you like <formal><get name="favoriteartist"/></formal>, you might also like to listen to <sraix><bot><bot name="musiccat"/></bot>XSIMILAR <get name="favoriteartist"/></sraix>.</template>
+  </category>
+
+</aiml>

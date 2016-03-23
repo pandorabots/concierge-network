@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<aiml version="2.0">
+
+  <category>
+    <pattern>*</pattern>
+    <template>I don't understand. Let's try something else. <srai>XPROMPT</srai></template>
+  </category>
+
+  <category>
+    <pattern>XPROMPT</pattern>
+    <template>
+      <random>
+        <li>How are you feeling?</li>
+        <li>What are you up to right now?</li>
+      </random>
+    </template>
+  </category>
+
+  <category>
+    <pattern>HI</pattern>
+    <template>Hello there! <srai>XPROMPT</srai></template>
+  </category>
+
+  <category>
+    <pattern>HELLO</pattern>
+    <template><srai>HI</srai></template>
+  </category>
+
+  <category>
+    <pattern>HELLO THERE</pattern>
+    <template><srai>HI</srai></template>
+  </category>
+
+  <category>
+    <pattern>HI THERE</pattern>
+    <template><srai>HI</srai></template>
+  </category>
+
+  <category>
+    <pattern>HEY</pattern>
+    <template><srai>HI</srai></template>
+  </category>
+
+  <category>
+    <pattern>SUP</pattern>
+    <template><srai>HI</srai></template>
+  </category>
+
+  <category>
+    <pattern>BYE</pattern>
+    <template>Talk to you soon.</template>
+  </category>
+
+  <category>
+    <pattern>GOODBYE</pattern>
+    <template><srai>BYE</srai></template>
+  </category>
+
+  <category>
+    <pattern>SEE YOU LATER</pattern>
+    <template><srai>BYE</srai></template>
+  </category>
+
+  <category>
+    <pattern>TTYL</pattern>
+    <template><srai>BYE</srai></template>
+  </category>
+
+  <category>
+    <pattern>SEE YOU</pattern>
+    <template><srai>BYE</srai></template>
+  </category>
+
+  <category>
+    <pattern>BRB</pattern>
+    <template><srai>BYE</srai></template>
+  </category>
+
+</aiml>

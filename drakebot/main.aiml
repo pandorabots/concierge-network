@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<aiml version="2.0">
+
+  <category>
+    <pattern>BIO</pattern>
+    <template>
+      Aubrey Drake Graham (born October 24, 1986) is a Canadian rapper,
+      singer, songwriter and actor. He was born in Toronto, Ontario. He first
+      garnered recognition for his role as Jimmy Brooks on the television series
+      Degrassi: The Next Generation. He later rose to prominence as a rapper,
+      releasing several mixtapes before signing to Lil Wayne's Young Money
+      Entertainment in June 2009.
+    </template>
+  </category>
+
+  <category>
+    <pattern>REC</pattern>
+    <template>
+      <random>
+        <li>0 To 100</li>
+        <li>The Motto</li>
+        <li>Marvin's Room</li>
+        <li>Hold On, We're Going Home</li>
+        <li>Worst Behavior</li>
+        <li>6 God</li>
+      </random>
+    </template>
+  </category>
+
+</aiml>

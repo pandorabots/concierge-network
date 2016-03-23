@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<aiml version="2.0">
+
+  <!-- just use Drake as an example for now -->
+
+  <category>
+    <pattern>TELL ME ABOUT *</pattern>
+    <template><srai>XBIO <star/></srai></template>
+  </category>
+
+  <category>
+    <pattern>XBIO *</pattern>
+    <template>
+      <think><set var="artist"><map name="artists"><star/></map></set></think>
+      <condition var="artist">
+        <li value="unknown">I don't know much about that artist.</li>
+        <li><sraix><bot><bot name="app-id"/>/<map name="artists"><star/></map></bot>BIO</sraix> Want to hear a <star/> song?</li>
+      </condition>
+    </template>
+  </category>
+
+  <category>
+    <pattern>YES</pattern>
+    <that>WANT TO HEAR A * SONG</that>
+    <template>
+      <sraix><bot><bot name="app-id"/>/<map name="artists"><thatstar/></map></bot>REC</sraix> - <formal><thatstar/></formal>
+    </template>
+  </category>
+
+</aiml>
