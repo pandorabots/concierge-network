@@ -1,6 +1,6 @@
 # Concierge network
 
-These are the bot files described in a [recent article]() posted on
+These are the bot files described in a [recent article](http://pandorabots.github.io/tutorials/build-a-concierge-bot) posted on
 our docs site. 
 
 To get started, you'll need:
