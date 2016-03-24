@@ -10,7 +10,7 @@ To get started, you'll need:
 
 ## Setup
 
-You'll need to create 3 bots on your account (drakebot, mussiccat, personal).
+You'll need to create 3 bots on your account (drakebot, musiccat, personal).
 Upload each set of bot files to the correct botname.
 
 Once you've done this, you'll need to configure a property in the personal bot
